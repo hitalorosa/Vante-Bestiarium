@@ -142,8 +142,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(13, 12, 20, 0.92);
-  backdrop-filter: blur(12px);
+  background: #0D0C14;
   border-bottom: 1px solid var(--cor-borda);
 }
 
@@ -198,14 +197,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
     var(--cor-fundo);
 }
 
-#canvas-nevoa {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
-}
 
 .hero__conteudo {
   position: relative;
@@ -227,7 +218,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
     0 0 80px rgba(107, 79, 204, 0.3),
     0 2px 4px rgba(0,0,0,0.8);
   margin-bottom: var(--espaco-md);
-  will-change: transform;
 }
 
 .hero__tagline {
@@ -290,11 +280,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   background: var(--cor-superficie);
   border-top: 1px solid var(--cor-borda);
   border-bottom: 1px solid var(--cor-borda);
-  padding: var(--espaco-lg) var(--espaco-md);
-  position: sticky;
-  top: 57px;
-  z-index: 90;
-  backdrop-filter: blur(8px);
+  padding: 0.55rem 1.5rem;
 }
 
 .filtros__inner {
@@ -302,39 +288,41 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--espaco-md) var(--espaco-xl);
-  align-items: flex-start;
+  align-items: center;
+  gap: 0.4rem 1.8rem;
 }
 
 .filtros__grupo {
   display: flex;
-  flex-direction: column;
-  gap: var(--espaco-sm);
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .filtros__label {
   font-family: var(--fonte-stats);
-  font-size: var(--tam-mono);
+  font-size: 0.62rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--cor-texto-sutil);
+  white-space: nowrap;
 }
 
 .filtros__pills {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--espaco-sm);
+  gap: 0.35rem;
 }
 
 .pill {
-  padding: 0.3rem 0.9rem;
+  padding: 0.2rem 0.75rem;
   border-radius: 40px;
   border: 1px solid var(--cor-borda);
   background: transparent;
   color: var(--cor-texto-sutil);
   font-family: var(--fonte-lore);
-  font-size: var(--tam-pequeno);
-  letter-spacing: 0.03em;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
   transition: all var(--transicao-rapida);
 }
 
@@ -372,7 +360,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .grade-section {
   max-width: var(--largura-max);
   margin: 0 auto;
-  padding: var(--espaco-xl) var(--espaco-md);
+  padding: var(--espaco-lg) var(--espaco-md);
 }
 
 .grade {
@@ -477,12 +465,18 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   gap: var(--espaco-md);
 }
 
-/* ---- Raridade: borda e brilho ---- */
-.card-wrapper.raridade-comum     .card-frente { border-color: var(--raridade-comum);    animation: pulso-comum 3s ease-in-out infinite; }
-.card-wrapper.raridade-incomum   .card-frente { border-color: var(--raridade-incomum);  animation: pulso-incomum 3s ease-in-out infinite; }
-.card-wrapper.raridade-raro      .card-frente { border-color: var(--raridade-raro);     animation: pulso-raro 3s ease-in-out infinite; }
-.card-wrapper.raridade-epico     .card-frente { border-color: var(--raridade-epico);    animation: pulso-epico 2s ease-in-out infinite; }
-.card-wrapper.raridade-lendario  .card-frente { border-color: var(--raridade-lendario); animation: pulso-lendario 1.5s ease-in-out infinite; }
+/* ---- Raridade: borda estática + brilho apenas no hover ---- */
+.card-wrapper.raridade-comum    .card-frente { border-color: var(--raridade-comum);    box-shadow: 0 0 10px var(--raridade-comum-glow),    var(--sombra-card); }
+.card-wrapper.raridade-incomum  .card-frente { border-color: var(--raridade-incomum);  box-shadow: 0 0 10px var(--raridade-incomum-glow),  var(--sombra-card); }
+.card-wrapper.raridade-raro     .card-frente { border-color: var(--raridade-raro);     box-shadow: 0 0 10px var(--raridade-raro-glow),     var(--sombra-card); }
+.card-wrapper.raridade-epico    .card-frente { border-color: var(--raridade-epico);    box-shadow: 0 0 10px var(--raridade-epico-glow),    var(--sombra-card); }
+.card-wrapper.raridade-lendario .card-frente { border-color: var(--raridade-lendario); box-shadow: 0 0 10px var(--raridade-lendario-glow), var(--sombra-card); }
+
+.card-wrapper.raridade-comum:hover    .card-frente { box-shadow: 0 0 24px var(--raridade-comum-glow),    var(--sombra-card); }
+.card-wrapper.raridade-incomum:hover  .card-frente { box-shadow: 0 0 24px var(--raridade-incomum-glow),  var(--sombra-card); }
+.card-wrapper.raridade-raro:hover     .card-frente { box-shadow: 0 0 24px var(--raridade-raro-glow),     var(--sombra-card); }
+.card-wrapper.raridade-epico:hover    .card-frente { box-shadow: 0 0 28px var(--raridade-epico-glow),    var(--sombra-card); }
+.card-wrapper.raridade-lendario:hover .card-frente { box-shadow: 0 0 32px var(--raridade-lendario-glow), var(--sombra-card); }
 
 .card-wrapper.raridade-comum     .card-verso { border-color: var(--raridade-comum); }
 .card-wrapper.raridade-incomum   .card-verso { border-color: var(--raridade-incomum); }
@@ -986,31 +980,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   to   { opacity: 1; transform: scale(1) translateY(0); }
 }
 
-@keyframes pulso-comum {
-  0%, 100% { box-shadow: 0 0 8px  var(--raridade-comum-glow),   var(--sombra-card); }
-  50%       { box-shadow: 0 0 20px var(--raridade-comum-glow),   var(--sombra-card); }
-}
-
-@keyframes pulso-incomum {
-  0%, 100% { box-shadow: 0 0 8px  var(--raridade-incomum-glow), var(--sombra-card); }
-  50%       { box-shadow: 0 0 20px var(--raridade-incomum-glow), var(--sombra-card); }
-}
-
-@keyframes pulso-raro {
-  0%, 100% { box-shadow: 0 0 8px  var(--raridade-raro-glow),    var(--sombra-card); }
-  50%       { box-shadow: 0 0 24px var(--raridade-raro-glow),    var(--sombra-card); }
-}
-
-@keyframes pulso-epico {
-  0%, 100% { box-shadow: 0 0 12px var(--raridade-epico-glow),   var(--sombra-card); }
-  50%       { box-shadow: 0 0 30px var(--raridade-epico-glow),   var(--sombra-card); }
-}
-
-@keyframes pulso-lendario {
-  0%   { box-shadow: 0 0 16px var(--raridade-lendario-glow), var(--sombra-card); filter: brightness(1); }
-  50%  { box-shadow: 0 0 36px var(--raridade-lendario-glow), 0 0 60px rgba(232,160,32,0.2), var(--sombra-card); filter: brightness(1.05); }
-  100% { box-shadow: 0 0 16px var(--raridade-lendario-glow), var(--sombra-card); filter: brightness(1); }
-}
 
 /* ============================================================
    RESPONSIVIDADE

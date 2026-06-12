@@ -20,8 +20,6 @@ async function inicializar() {
     inicializarFiltros();
     inicializarBusca();
     inicializarModal();
-    inicializarCanvas();
-    inicializarParallax();
   } catch (err) {
     console.error('Erro ao carregar monsters.json:', err);
     document.getElementById('estado-vazio').hidden = false;
@@ -329,101 +327,6 @@ function capturarFoco(e) {
   }
 }
 
-/* ============================================================
-   CANVAS — NÉVOA / PARTÍCULAS
-   ============================================================ */
-function inicializarCanvas() {
-  const canvas = document.getElementById('canvas-nevoa');
-  const ctx = canvas.getContext('2d');
-
-  let largura, altura, particulas;
-  let animando = true;
-
-  const prefereReducao = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (prefereReducao) return;
-
-  function redimensionar() {
-    largura = canvas.width = canvas.offsetWidth;
-    altura = canvas.height = canvas.offsetHeight;
-  }
-
-  function criarParticulas() {
-    particulas = Array.from({ length: 55 }, () => ({
-      x: Math.random() * largura,
-      y: Math.random() * altura,
-      raio: Math.random() * 120 + 40,
-      opacidade: Math.random() * 0.06 + 0.02,
-      vx: (Math.random() - 0.5) * 0.3,
-      vy: (Math.random() - 0.5) * 0.15,
-      cor: Math.random() > 0.6 ? '107, 79, 204' : '232, 220, 255',
-    }));
-  }
-
-  function animar() {
-    if (!animando) return;
-    ctx.clearRect(0, 0, largura, altura);
-
-    particulas.forEach(p => {
-      p.x += p.vx;
-      p.y += p.vy;
-
-      if (p.x < -p.raio) p.x = largura + p.raio;
-      if (p.x > largura + p.raio) p.x = -p.raio;
-      if (p.y < -p.raio) p.y = altura + p.raio;
-      if (p.y > altura + p.raio) p.y = -p.raio;
-
-      const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.raio);
-      grad.addColorStop(0, `rgba(${p.cor}, ${p.opacidade})`);
-      grad.addColorStop(1, `rgba(${p.cor}, 0)`);
-
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.raio, 0, Math.PI * 2);
-      ctx.fillStyle = grad;
-      ctx.fill();
-    });
-
-    requestAnimationFrame(animar);
-  }
-
-  const obs = new IntersectionObserver((entradas) => {
-    animando = entradas[0].isIntersecting;
-    if (animando) animar();
-  });
-
-  obs.observe(canvas);
-
-  window.addEventListener('resize', () => {
-    redimensionar();
-    criarParticulas();
-  }, { passive: true });
-
-  redimensionar();
-  criarParticulas();
-  animar();
-}
-
-/* ============================================================
-   PARALLAX DO HERO
-   ============================================================ */
-function inicializarParallax() {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-  const titulo = document.querySelector('.hero__titulo');
-  if (!titulo) return;
-
-  let ticking = false;
-
-  window.addEventListener('scroll', () => {
-    if (!ticking) {
-      requestAnimationFrame(() => {
-        const scrollY = window.scrollY;
-        titulo.style.transform = `translateY(${scrollY * 0.25}px)`;
-        ticking = false;
-      });
-      ticking = true;
-    }
-  }, { passive: true });
-}
 
 /* ============================================================
    UTILITÁRIOS
