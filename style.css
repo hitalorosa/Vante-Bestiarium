@@ -453,30 +453,39 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   opacity: 0.3;
 }
 
-/* === IMAGEM DO CARD === */
+/* === IMAGEM DO CARD — cobre a frente inteira === */
 .card-imagem {
-  width: 100%;
-  height: 155px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
   overflow: hidden;
-  margin: var(--espaco-sm) 0;
-  flex-shrink: 0;
+  border-radius: var(--borda-raio-lg);
+}
+
+.card-imagem::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.88) 0%,
+    rgba(0, 0, 0, 0.55) 40%,
+    rgba(0, 0, 0, 0.15) 70%,
+    transparent 100%
+  );
+  z-index: 1;
 }
 
 .card-img {
-  max-height: 100%;
-  max-width: 100%;
-  width: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.35));
-  transition: transform var(--transicao-base), filter var(--transicao-base);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform var(--transicao-lenta);
 }
 
 .card-wrapper:hover .card-img {
-  transform: translateY(-3px) scale(1.04);
-  filter: drop-shadow(0 8px 20px rgba(0,0,0,0.5));
+  transform: scale(1.06);
 }
 
 /* === VERSO === */
@@ -510,12 +519,14 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .card-wrapper.raridade-epico     .card-verso { border-color: var(--raridade-epico); }
 .card-wrapper.raridade-lendario  .card-verso { border-color: var(--raridade-lendario); }
 
-/* ---- Conteúdo da frente ---- */
+/* ---- Conteúdo da frente — z-index acima da imagem ---- */
 .card-topo {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: var(--espaco-sm);
+  position: relative;
+  z-index: 2;
 }
 
 .badge-raridade {
@@ -550,27 +561,34 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-family: var(--fonte-titulo);
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   font-weight: 700;
-  color: var(--cor-texto-escuro);
+  color: var(--cor-texto-claro);
   line-height: 1.2;
   margin-bottom: var(--espaco-xs);
   letter-spacing: 0.02em;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.8);
 }
 
 .card-separador {
   width: 40px;
   height: 1px;
-  background: var(--cor-texto-escuro);
-  opacity: 0.3;
+  background: rgba(232, 223, 200, 0.4);
   margin: var(--espaco-sm) 0;
+  position: relative;
+  z-index: 2;
 }
 
 .card-descricao {
   font-family: var(--fonte-lore);
   font-style: italic;
   font-size: 0.88rem;
-  color: rgba(44, 26, 14, 0.8);
+  color: rgba(232, 223, 200, 0.85);
   line-height: 1.5;
   flex: 1;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.9);
 }
 
 .card-rodape {
@@ -579,7 +597,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   align-items: center;
   margin-top: auto;
   padding-top: var(--espaco-sm);
-  border-top: 1px solid rgba(44, 26, 14, 0.2);
+  border-top: 1px solid rgba(232, 223, 200, 0.2);
+  position: relative;
+  z-index: 2;
 }
 
 .badge-cr {
