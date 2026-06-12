@@ -310,6 +310,83 @@
         { "nome": "Mordida Condutora", "descricao": "Ataque corpo a corpo: +5 para acertar, 1d8+3 de dano perfurante + 1d6 de dano de relâmpago." }
       ],
       "tags": ["dragão", "relâmpago", "incomum", "voador"]
+    },
+    {
+      "id": "devorador-cosmico",
+      "nome": "Devorador Cósmico",
+      "tipo": "Aberração",
+      "raridade": "Épico",
+      "cr": 15,
+      "pv": 180,
+      "ca": 17,
+      "deslocamento": "1,5 m, voo 12 m (flutuar)",
+      "descricao": "Um horror cósmico de tentáculos molhados e múltiplos olhos que flutua no vazio.",
+      "lore": "Nascido no vazio insondável entre as estrelas, o Devorador Cósmico é uma entidade que desafia a compreensão mortal. Ele não se alimenta de carne, mas da própria sanidade e memórias daqueles que ousam encará-lo. Sua presença distorce a gravidade e o espaço, criando um campo de puro terror lovecraftiano.",
+      "habitat": "Fendas dimensionais, templos esquecidos no subsolo, O Vazio",
+      "stats": { "for": 14, "des": 12, "con": 18, "int": 22, "sab": 18, "car": 16 },
+      "habilidades": [
+        { "nome": "Aura da Loucura", "descricao": "Qualquer criatura que comece seu turno a até 9 metros do Devorador deve fazer um teste de Sabedoria CD 16. Em caso de falha, a criatura sofre desvantagem em seus próximos ataques devido a visões aterrorizantes." },
+        { "nome": "Abraço do Vazio", "descricao": "Ataque Mágico Corpo a Corpo: +10 para acertar, alcance 4,5 m, um alvo. Acerto: O alvo sofre 4d10 de dano psíquico e fica agarrado pelos tentáculos roxos da criatura." }
+      ],
+      "tags": ["aberração", "cósmico", "épico", "psíquico"]
+    },
+    {
+      "id": "anjo-caido-abismo",
+      "nome": "Anjo Caído do Abismo",
+      "tipo": "Celestial",
+      "raridade": "Lendário",
+      "cr": 21,
+      "pv": 245,
+      "ca": 21,
+      "deslocamento": "9 m, voo 24 m",
+      "descricao": "Um guerreiro divino corrompido, com asas de penas negras esfarrapadas e uma máscara dourada rachada.",
+      "lore": "Outrora um guardião das chamas celestiais, este ser foi consumido pela própria escuridão que jurou destruir. Agora, banido para o Abismo, ele empunha uma espada corrompida. Sua máscara dourada esconde um rosto desprovido de luz, e sua mera presença sufoca qualquer esperança em um campo de batalha. Lendas dizem que suas lágrimas se transformam em cinzas antes de tocarem o chão.",
+      "habitat": "Campos de batalha profanados, planícies de cinzas, profundezas do Abismo",
+      "stats": { "for": 24, "des": 18, "con": 22, "int": 16, "sab": 20, "car": 24 },
+      "habilidades": [
+        { "nome": "Presença Aterradora", "descricao": "Cada criatura à escolha do Anjo a até 36 metros dele deve ser bem-sucedida num teste de Sabedoria CD 21 ou ficará amedrontada por 1 minuto." },
+        { "nome": "Golpe do Julgamento Profano", "descricao": "Ataque com Espada Grande: +14 para acertar, alcance 1,5 m, um alvo. Acerto: O alvo sofre 2d6 + 7 de dano cortante mais 4d8 de dano necrótico. Se o alvo for uma criatura boa, ele deve passar num teste de Constituição ou perderá parte de sua vitalidade máxima." }
+      ],
+      "tags": ["celestial", "corrompido", "lendário", "abissal"]
+    },
+    {
+      "id": "ent-corrompido",
+      "nome": "Ent Corrompido pela Praga",
+      "tipo": "Planta",
+      "raridade": "Raro",
+      "cr": 8,
+      "pv": 135,
+      "ca": 16,
+      "deslocamento": "6 m",
+      "descricao": "Uma árvore monstruosa morta, com casca retorcida e seiva roxa brilhante vazando de suas rachaduras.",
+      "lore": "Esta antiga criatura protetora da floresta foi vítima de uma magia negra ancestral. Onde antes abrigava a vida selvagem em seus galhos, agora espalha necrose e podridão por onde passa. Sua seiva tornou-se um veneno altamente volátil, e suas raízes se movem como tentáculos famintos sob a terra lamacenta, esmagando invasores com força brutal.",
+      "habitat": "Pântanos mortos, florestas corrompidas, charcos enevoados",
+      "stats": { "for": 20, "des": 8, "con": 18, "int": 6, "sab": 10, "car": 6 },
+      "habilidades": [
+        { "nome": "Raízes Esmagadoras", "descricao": "Como uma ação, o Ent pode fazer com que raízes espinhentas irrompam do chão num raio de 6 metros. Todas as criaturas na área devem passar num teste de Destreza CD 15 ou sofrer 3d6 de dano contundente e ficar impedidas." },
+        { "nome": "Sangrar Seiva Tóxica", "descricao": "Sempre que o Ent sofre dano cortante ou perfurante, todas as criaturas a até 1,5 metro dele devem passar num teste de Constituição CD 14, ou sofrerão 2d6 de dano venenoso pela seiva roxa corrosiva que espirra de sua casca." }
+      ],
+      "tags": ["planta", "corrompido", "raro", "floresta"]
+    },
+    {
+      "id": "nagi-loxley",
+      "nome": "Nagi Loxley",
+      "tipo": "Herói Híbrido",
+      "raridade": "Lendário",
+      "cr": 18,
+      "pv": 210,
+      "ca": 20,
+      "deslocamento": "12 m",
+      "descricao": "Herdeiro de tronos poderosos, recusa uma profecia de terror para trilhar o próprio caminho como rei.",
+      "lore": "Nagi Loxley é um jovem de feições japonesas que carrega uma dualidade amaldiçoada: o sangue frio dos vampiros e a fúria caótica dos demônios. Existe uma profecia antiga que o liga à destruição, mas ele possui um olhar de aço determinado e recusa esse destino. Empunhando sua Lâmina Emblemática, uma relíquia que canaliza seu poder abissal em um tom roxo profundo, o jovem rei viaja não como uma vítima do destino, mas como alguém lutando ativamente contra ele. Cada uso de seu poder é uma aposta perigosa contra sua própria humanidade.",
+      "habitat": "Castelo Loxley, campos de batalha e cortes reais corrompidas",
+      "stats": { "for": 22, "des": 18, "con": 20, "int": 16, "sab": 14, "car": 20 },
+      "habilidades": [
+        { "nome": "Dualidade Amaldiçoada", "descricao": "Nagi possui resistência a dano necrótico e de fogo devido à sua linhagem meio-vampiro e meio-demônio. Seus ataques ignoram imunidades e resistências a dano cortante de criaturas celestiais ou corruptas." },
+        { "nome": "Ataque da Lâmina Emblemática", "descricao": "Ataque com Arma Corpo a Corpo: +12 para acertar, alcance 1,5 m, um alvo. Acerto: O alvo sofre dano mágico cortante e adicional de energia sombria. Nagi recupera Pontos de Vida iguais à metade do dano sombrio causado." },
+        { "nome": "Aura de Rei (Postura de Comando)", "descricao": "Qualquer aliado a até 9 metros de Nagi tem vantagem em testes de resistência contra medo ou encantamento, inspirados por sua determinação feroz e postura imponente." }
+      ],
+      "tags": ["híbrido", "herói", "lendário", "vampiro", "demônio"]
     }
   ]
 }

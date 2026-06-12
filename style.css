@@ -51,7 +51,7 @@
 
   --largura-max:   1280px;
   --largura-card:  280px;
-  --altura-card:   400px;
+  --altura-card:   480px;
   --gap-grid:      1.5rem;
   --borda-raio:    6px;
   --borda-raio-lg: 12px;
@@ -451,6 +451,32 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   border-radius: 0 0 3px 3px;
   background: currentColor;
   opacity: 0.3;
+}
+
+/* === IMAGEM DO CARD === */
+.card-imagem {
+  width: 100%;
+  height: 155px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: var(--espaco-sm) 0;
+  flex-shrink: 0;
+}
+
+.card-img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.35));
+  transition: transform var(--transicao-base), filter var(--transicao-base);
+}
+
+.card-wrapper:hover .card-img {
+  transform: translateY(-3px) scale(1.04);
+  filter: drop-shadow(0 8px 20px rgba(0,0,0,0.5));
 }
 
 /* === VERSO === */

@@ -72,6 +72,15 @@ function criarCardHTML(monstro, indice) {
           <span class="card-tipo">${monstro.tipo}</span>
           <span class="badge-raridade">${monstro.raridade}</span>
         </div>
+        <div class="card-imagem">
+          <img
+            class="card-img"
+            src="assets/monstros/${monstro.id}.png"
+            alt="${monstro.nome}"
+            loading="lazy"
+            onerror="this.parentElement.style.display='none'"
+          />
+        </div>
         <h3 class="card-nome">${monstro.nome}</h3>
         <div class="card-separador"></div>
         <p class="card-descricao">${monstro.descricao}</p>
