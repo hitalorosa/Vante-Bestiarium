@@ -1,0 +1,392 @@
+{
+  "monstros": [
+    {
+      "id": "dragao-vermelho-anciao",
+      "nome": "Dragão Vermelho Ancião",
+      "tipo": "Dragão",
+      "raridade": "Lendário",
+      "cr": 24,
+      "pv": 546,
+      "ca": 22,
+      "deslocamento": "12 m, voo 24 m",
+      "descricao": "Um terror mais antigo que reinos — seu sopro derrete pedra e queima a memória.",
+      "lore": "Antes de os primeiros reis erguerem seus tronos, o Dragão Vermelho Ancião já sobrevoava as montanhas vulcânicas do leste. Sua presença transforma o ar em fumaça sulfúrica e seu rugido faz pedras tremeluzir. Dizem os sábios que ele não ataca por fome — ataca por costume, pois destruiu tantas civilizações que a violência tornou-se para ele uma forma de arte.",
+      "habitat": "Montanhas vulcânicas e planos de fogo",
+      "stats": { "for": 30, "des": 10, "con": 29, "int": 18, "sab": 15, "car": 23 },
+      "habilidades": [
+        { "nome": "Sopro de Fogo", "descricao": "O dragão exala fogo em um cone de 27 m. Salvaguarda de Des CD 24, 26d6 de dano de fogo." },
+        { "nome": "Resistência Lendária", "descricao": "3/Dia. Se o dragão falhar em uma salvaguarda, pode optar por ter sucesso." },
+        { "nome": "Presença Assustadora", "descricao": "Cada criatura a escolha do dragão em um raio de 36 m deve ser bem-sucedida em uma salvaguarda de Sab CD 21 ou ficará amedrontada por 1 minuto." }
+      ],
+      "tags": ["dragão", "fogo", "lendário", "chefe"]
+    },
+    {
+      "id": "lich-soberana",
+      "nome": "Lich Soberana",
+      "tipo": "Morto-Vivo",
+      "raridade": "Épico",
+      "cr": 21,
+      "pv": 135,
+      "ca": 17,
+      "deslocamento": "9 m",
+      "descricao": "Uma feiticeira que trocou sua alma por eternidade — e não se arrepende.",
+      "lore": "A Lich Soberana foi uma vez a arquimaga mais poderosa do reino de Valdrath. Quando a morte se aproximou, ela não implorou — ela negociou. Seu phylactério está escondido em algum plano além do conhecimento mortal. Suas órbitas ocas ardem com luz roxa, e sua voz soa como pergaminhos rasgados no vento glacial.",
+      "habitat": "Torres abandonadas, catacumbas profundas, reinos planar",
+      "stats": { "for": 11, "des": 16, "con": 16, "int": 20, "sab": 14, "car": 16 },
+      "habilidades": [
+        { "nome": "Toque da Lich", "descricao": "Ataque corpo a corpo: +7 para acertar, 10 (3d6) de dano de frio. A criatura alvo deve ser bem-sucedida em uma salvaguarda de Con CD 18 ou ficará paralisada." },
+        { "nome": "Resistência à Magia", "descricao": "A lich tem vantagem em salvaguardas contra magias e outros efeitos mágicos." },
+        { "nome": "Phylactério", "descricao": "Se destruída, a lich ressurge em 1d10 dias enquanto seu phylactério permanecer intacto." }
+      ],
+      "tags": ["morto-vivo", "magia", "épico", "chefe"]
+    },
+    {
+      "id": "lobo-sombra",
+      "nome": "Lobo das Sombras",
+      "tipo": "Besta",
+      "raridade": "Incomum",
+      "cr": 2,
+      "pv": 38,
+      "ca": 13,
+      "deslocamento": "12 m",
+      "descricao": "Nenhuma tocha é forte o suficiente. Ele sempre encontra a escuridão entre as chamas.",
+      "lore": "Os Lobos das Sombras não existem no plano material — eles habitam o espaço entre a luz e a ausência dela. Quando a noite cai sobre as florestas, suas silhuetas escorregam pelas árvores como manchas de tinta derramada. Caçadores experientes sabem que se você ouviu o uivo, já é tarde demais.",
+      "habitat": "Florestas sombrias, planícies à noite, regiões próximas ao Plano das Sombras",
+      "stats": { "for": 17, "des": 15, "con": 15, "int": 5, "sab": 12, "car": 8 },
+      "habilidades": [
+        { "nome": "Passo nas Sombras", "descricao": "Em áreas de escuridão ou penumbra, o lobo pode se teleportar até 12 m para um espaço desocupado que também esteja em escuridão." },
+        { "nome": "Derrubar", "descricao": "Se o lobo acertar uma criatura com um ataque de mordida, a criatura deve ser bem-sucedida em uma salvaguarda de For CD 13 ou será derrubada." }
+      ],
+      "tags": ["besta", "sombras", "incomum", "noite"]
+    },
+    {
+      "id": "golem-pedra",
+      "nome": "Golem de Pedra",
+      "tipo": "Elemental",
+      "raridade": "Raro",
+      "cr": 10,
+      "pv": 178,
+      "ca": 17,
+      "deslocamento": "9 m",
+      "descricao": "Construído para guardar segredos que nenhum ser vivo deveria conhecer.",
+      "lore": "Não é uma criatura — é uma intenção solidificada em rocha. O Golem de Pedra não conhece fome, medo ou cansaço. Conhece apenas o comando que foi inscrito em sua pedra-núcleo há séculos. Quando o mago que o criou morreu, o golem continuou guardando. Continua até hoje.",
+      "habitat": "Masmorras, câmaras de tesouro, templos antigos",
+      "stats": { "for": 22, "des": 9, "con": 20, "int": 3, "sab": 11, "car": 1 },
+      "habilidades": [
+        { "nome": "Imune a Magia", "descricao": "O golem é imune a magias e resistente a dano não mágico." },
+        { "nome": "Ataque Lento", "descricao": "O golem pode fazer dois ataques de soco por ação, causando 3d8+6 de dano contundente cada." },
+        { "nome": "Endurecimento", "descricao": "Se o golem receber menos de 10 de dano em um único ataque, o dano é reduzido a 0." }
+      ],
+      "tags": ["elemental", "construção", "raro", "guarda"]
+    },
+    {
+      "id": "vampiro-lorde",
+      "nome": "Vampiro Lorde",
+      "tipo": "Morto-Vivo",
+      "raridade": "Épico",
+      "cr": 13,
+      "pv": 144,
+      "ca": 16,
+      "deslocamento": "9 m",
+      "descricao": "Séculos de sangue, política e traição. Ele é o mais perigoso dos dois.",
+      "lore": "O Vampiro Lorde não age nos campos de batalha — ele age nos salões de baile. Em séculos de existência, aprendeu que o poder real não vem de garras, mas de informações, alianças e medos cuidadosamente cultivados. Sua mansão está repleta de retratos de todas as vidas que consumiu — e ele se lembra do nome de cada uma.",
+      "habitat": "Mansões isoladas, castelos em montanhas, cidades onde a lei é fraca",
+      "stats": { "for": 20, "des": 20, "con": 20, "int": 17, "sab": 15, "car": 20 },
+      "habilidades": [
+        { "nome": "Mordida", "descricao": "Ataque corpo a corpo: +9 para acertar, 7 (1d6+4) de dano perfurante + 10 (3d6) de dano necrótico. O vampiro recupera PV iguais ao dano necrótico causado." },
+        { "nome": "Forma de Névoa", "descricao": "Se tiver pelo menos 1 PV, o vampiro pode usar uma ação bônus para se transformar em névoa ou voltar à forma normal." },
+        { "nome": "Hipnose", "descricao": "O vampiro mira em uma criatura que possa ver a até 9 m. Salvaguarda de Sab CD 17 ou ficará enfeitiçada." }
+      ],
+      "tags": ["morto-vivo", "vampiro", "épico", "social"]
+    },
+    {
+      "id": "esqueleto-guerreiro",
+      "nome": "Esqueleto Guerreiro",
+      "tipo": "Morto-Vivo",
+      "raridade": "Comum",
+      "cr": 1,
+      "pv": 13,
+      "ca": 13,
+      "deslocamento": "9 m",
+      "descricao": "A armadura ainda brilha. O guerreiro que a vestia, não existe mais.",
+      "lore": "Nos campos onde batalhas foram travadas e esquecidas, os Esqueletos Guerreiros se levantam quando a necromancia corrompe a terra. Eles não têm personalidade, não têm memória — apenas o impulso de atacar o que vive. A armadura enferrujada ainda carrega brasões de reinos que ruíram há séculos.",
+      "habitat": "Campos de batalha antigos, catacumbas, masmorras com necromante",
+      "stats": { "for": 15, "des": 14, "con": 15, "int": 6, "sab": 8, "car": 5 },
+      "habilidades": [
+        { "nome": "Ataque com Espada", "descricao": "Ataque corpo a corpo: +4 para acertar, 1d6+2 de dano cortante." },
+        { "nome": "Resistência ao Frio", "descricao": "O esqueleto é resistente a dano de frio." }
+      ],
+      "tags": ["morto-vivo", "comum", "guerreiro", "iniciante"]
+    },
+    {
+      "id": "basilisco-petrificante",
+      "nome": "Basilisco Petrificante",
+      "tipo": "Besta",
+      "raridade": "Raro",
+      "cr": 3,
+      "pv": 52,
+      "ca": 15,
+      "deslocamento": "6 m",
+      "descricao": "Olhos como pedras polidas. Quem olha, vira pedra polida.",
+      "lore": "O Basilisco habita cavernas úmidas onde a luz nunca chega completamente. Seus oito olhos funcionam de forma independente — nunca fecha todos ao mesmo tempo. Arqueólogos que exploram suas cavernas frequentemente encontram coleções estranhas: figuras de pedra em poses de fuga, com expressões de horror cristalizadas para sempre.",
+      "habitat": "Cavernas subterrâneas, masmorras naturais, florestas densas",
+      "stats": { "for": 16, "des": 8, "con": 15, "int": 2, "sab": 8, "car": 7 },
+      "habilidades": [
+        { "nome": "Olhar Petrificante", "descricao": "Se uma criatura começar seu turno a até 9 m do basilisco e os dois puderem se ver, o basilisco pode forçar a criatura a fazer uma salvaguarda de Con CD 12. Se falhar, a criatura ficará paralisada. Se falhar novamente no turno seguinte, ficará petrificada." },
+        { "nome": "Mordida", "descricao": "Ataque corpo a corpo: +5 para acertar, 2d6+3 de dano perfurante." }
+      ],
+      "tags": ["besta", "petrificação", "raro", "caverna"]
+    },
+    {
+      "id": "demonio-balor",
+      "nome": "Balor",
+      "tipo": "Demônio",
+      "raridade": "Lendário",
+      "cr": 19,
+      "pv": 262,
+      "ca": 19,
+      "deslocamento": "12 m, voo 24 m",
+      "descricao": "Uma chama infernal com forma de gigante. O Abismo o cospe onde quer que a guerra seja mais brutal.",
+      "lore": "O Balor é o general dos exércitos demoníacos — não por escolha, mas por natureza. Onde ele pisa, a terra racha em fendas de lava. Seus olhos são buracos para o interior do Abismo, e sua presença apaga a esperança como vento apaga uma vela. Quando um Balor morre, a explosão destroça tudo em um raio de 9 metros.",
+      "habitat": "Planos Abissais, portais demoníacos, campos de batalha corrompidos",
+      "stats": { "for": 26, "des": 15, "con": 22, "int": 20, "sab": 16, "car": 22 },
+      "habilidades": [
+        { "nome": "Chicote de Fogo", "descricao": "Ataque à distância: alcance 9 m, +14 para acertar, 2d6+8 de dano de fogo + 2d6 de dano relâmpago. A criatura atingida é puxada até 7,5 m em direção ao Balor." },
+        { "nome": "Explosão de Morte", "descricao": "Quando o Balor morre, explode em uma onda de fogo demoníaco. Todas as criaturas em 9 m fazem salvaguarda de Des CD 20, sofrendo 70 (20d6) de dano de fogo se falharem." },
+        { "nome": "Resistência Mágica", "descricao": "O Balor tem vantagem em salvaguardas contra magias e efeitos mágicos." }
+      ],
+      "tags": ["demônio", "fogo", "lendário", "abissal"]
+    },
+    {
+      "id": "troll-regenerante",
+      "nome": "Troll Regenerante",
+      "tipo": "Besta",
+      "raridade": "Incomum",
+      "cr": 5,
+      "pv": 84,
+      "ca": 15,
+      "deslocamento": "9 m",
+      "descricao": "Cortou o braço? Ele cresceu. Decapitou? Ele questiona o conceito de cabeça.",
+      "lore": "Os Trolls Regenerantes são um pesadelo de biologia aberrante. Sua carne cicatriza em segundos — membros arrancados voltam a crescer em minutos. Dizem que um Troll reduzido a pedaços continuará se mexendo por horas. A única maneira de acabar com um é o fogo ou ácido. E mesmo assim, alguns sobrevivem.",
+      "habitat": "Pântanos, florestas úmidas, montanhas isoladas",
+      "stats": { "for": 18, "des": 13, "con": 20, "int": 7, "sab": 9, "car": 7 },
+      "habilidades": [
+        { "nome": "Regeneração", "descricao": "O troll recupera 10 PV no início de cada um de seus turnos. Se o troll receber dano de ácido ou fogo, esta característica não funciona no início do próximo turno." },
+        { "nome": "Garras e Mordida", "descricao": "O troll pode fazer três ataques por ação: uma mordida (1d6+4) e dois ataques de garras (2d6+4 cada)." }
+      ],
+      "tags": ["besta", "regeneração", "incomum", "pântano"]
+    },
+    {
+      "id": "elementar-fogo",
+      "nome": "Elementar de Fogo",
+      "tipo": "Elemental",
+      "raridade": "Incomum",
+      "cr": 5,
+      "pv": 102,
+      "ca": 13,
+      "deslocamento": "15 m",
+      "descricao": "Não é uma chama animada. É a própria vontade do fogo, com nome.",
+      "lore": "Quando um mago invoca um Elementar de Fogo, ele não cria — ele convida. O fogo sempre quis ter consciência, e esses seres são exatamente isso: chamas que aprenderam a querer. Eles não sentem calor porque eles são o calor. Tocá-los sem proteção é como abraçar uma fornalha.",
+      "habitat": "Plano do Fogo, vulcões, áreas incendiadas por magia",
+      "stats": { "for": 10, "des": 17, "con": 16, "int": 6, "sab": 10, "car": 7 },
+      "habilidades": [
+        { "nome": "Forma de Fogo", "descricao": "O elementar pode se mover por um espaço tão estreito quanto 2,5 cm sem se espremer. Qualquer criatura que tocar o elementar ou acertá-lo com um ataque corpo a corpo recebe 5 (1d10) de dano de fogo." },
+        { "nome": "Incendiar", "descricao": "Quando o elementar toca uma criatura ou objeto inflamável, ele pega fogo. Criaturas em chamas sofrem 5 (1d10) de dano de fogo no início de cada turno." }
+      ],
+      "tags": ["elemental", "fogo", "incomum", "planar"]
+    },
+    {
+      "id": "hidra-sete-cabecas",
+      "nome": "Hidra de Sete Cabeças",
+      "tipo": "Besta",
+      "raridade": "Épico",
+      "cr": 8,
+      "pv": 172,
+      "ca": 15,
+      "deslocamento": "9 m, natação 9 m",
+      "descricao": "Cortou uma? Cresceram duas. O heroísmo aqui é de longa duração.",
+      "lore": "Nenhuma pessoa razoável enfrenta uma Hidra sozinha. Nenhuma pessoa razoável enfrenta uma Hidra em grupo pequeno também. A criatura que habita pântanos e lagos profundos tem memória — ela reconhece a armadura dos caçadores que a feriram antes, e reagiu de forma diferente da última vez. As cabeças nem sempre concordam entre si, o que as torna ainda mais imprevisíveis.",
+      "habitat": "Pântanos, lagos profundos, cavernas costeiras",
+      "stats": { "for": 20, "des": 12, "con": 20, "int": 2, "sab": 10, "car": 7 },
+      "habilidades": [
+        { "nome": "Múltiplas Cabeças", "descricao": "A hidra tem 7 cabeças. Enquanto tiver mais de uma cabeça, a hidra tem vantagem em testes de Percepção e não pode ser surpreendida." },
+        { "nome": "Regenerar Cabeça", "descricao": "No fim de cada um de seus turnos, a hidra regenera cabeças perdidas. Para cada cabeça cortada, duas crescem — a menos que a ferida tenha sido cauterizada com fogo." },
+        { "nome": "Ataques Múltiplos", "descricao": "A hidra pode fazer ataques de mordida iguais ao número de cabeças que possui, causando 1d10+5 de dano cada." }
+      ],
+      "tags": ["besta", "hidra", "épico", "pântano"]
+    },
+    {
+      "id": "espectro-palacio",
+      "nome": "Espectro do Palácio",
+      "tipo": "Morto-Vivo",
+      "raridade": "Comum",
+      "cr": 1,
+      "pv": 22,
+      "ca": 12,
+      "deslocamento": "voo 15 m",
+      "descricao": "Ele ainda caminha pelos corredores do palácio onde morreu. Não percebeu que o palácio ruiu.",
+      "lore": "O Espectro do Palácio é o eco de uma vida que recusou a aceitar seu fim. Sua forma translúcida ainda veste as roupas em que morreu — um servo, um nobre, um guarda. Ele repete as mesmas rotas que percorria em vida, cumprindo deveres que não existem mais para mestres que morreram há gerações.",
+      "habitat": "Ruínas de castelos, mansões abandonadas, cemitérios urbanos",
+      "stats": { "for": 1, "des": 14, "con": 11, "int": 10, "sab": 10, "car": 11 },
+      "habilidades": [
+        { "nome": "Toque Espectral", "descricao": "Ataque corpo a corpo: +4 para acertar, 3d6 de dano necrótico. Não afeta construções." },
+        { "nome": "Incorporal", "descricao": "O espectro pode se mover através de outras criaturas e objetos sólidos como se fossem terreno difícil. Recebe 5 de dano de força se terminar o turno dentro de um objeto." }
+      ],
+      "tags": ["morto-vivo", "espectro", "comum", "ruínas"]
+    },
+    {
+      "id": "quimera-alada",
+      "nome": "Quimera Alada",
+      "tipo": "Besta",
+      "raridade": "Raro",
+      "cr": 6,
+      "pv": 114,
+      "ca": 14,
+      "deslocamento": "9 m, voo 18 m",
+      "descricao": "Cabeça de leão. Corpo de cabra. Cauda de dragão. A natureza teve um dia muito ruim.",
+      "lore": "Nenhum deus criou a Quimera intencionalmente. Ela é o resultado de experimentos arcanos mal-executados há milênios — uma criatura que nunca deveria ter existido e que, portanto, tem raiva de tudo que existe. Suas três cabeças têm personalidades distintas: a do leão quer caçar, a da cabra quer destruir e a de dragão quer incendiar. Elas raramente concordam, mas quando concordam, é devastador.",
+      "habitat": "Montanhas, desfiladeiros, áreas de magia selvagem",
+      "stats": { "for": 19, "des": 11, "con": 19, "int": 3, "sab": 14, "car": 10 },
+      "habilidades": [
+        { "nome": "Sopro de Fogo (recarga 5-6)", "descricao": "A quimera exala fogo em um cone de 9 m. Salvaguarda de Des CD 13, 7d8 de dano de fogo." },
+        { "nome": "Ataques Múltiplos", "descricao": "A quimera faz três ataques: uma mordida, um chifre e uma garra, causando danos variados conforme a cabeça." }
+      ],
+      "tags": ["besta", "quimera", "raro", "múltiplo"]
+    },
+    {
+      "id": "gigante-gelo",
+      "nome": "Gigante do Gelo",
+      "tipo": "Humanoide",
+      "raridade": "Raro",
+      "cr": 9,
+      "pv": 138,
+      "ca": 15,
+      "deslocamento": "12 m",
+      "descricao": "Mais alto que as muralhas de qualquer cidade. Mais frio que o inverno mais brutal.",
+      "lore": "Os Gigantes do Gelo habitam os picos permanentemente congelados do norte. Sua cultura é baseada em força bruta e caça — mas não se engane: eles têm arte, linguagem própria e um código de honra rígido. Atacar um Gigante do Gelo sem provocação é cometer uma ofensa contra todo o seu clã. E os clãs têm memória longa como os invernos.",
+      "habitat": "Picos nevados, tundras árticas, cavernas de gelo",
+      "stats": { "for": 23, "des": 9, "con": 21, "int": 9, "sab": 10, "car": 12 },
+      "habilidades": [
+        { "nome": "Arremesso de Rocha", "descricao": "Ataque à distância: alcance 18/72 m, +9 para acertar, 4d10+6 de dano contundente." },
+        { "nome": "Resistência ao Frio", "descricao": "O gigante é imune a dano de frio." },
+        { "nome": "Esmagar", "descricao": "Ataque corpo a corpo com machado de gelo: +9 para acertar, 3d12+6 de dano cortante." }
+      ],
+      "tags": ["humanoide", "gigante", "gelo", "raro"]
+    },
+    {
+      "id": "goblin-venenoso",
+      "nome": "Goblin Venenoso",
+      "tipo": "Humanoide",
+      "raridade": "Comum",
+      "cr": 0.25,
+      "pv": 7,
+      "ca": 15,
+      "deslocamento": "9 m",
+      "descricao": "Pequeno, rápido e absolutamente cheio de veneno. O pior tipo de problema.",
+      "lore": "Os Goblins Venenosos não são os mais fortes, nem os mais inteligentes. Mas são os mais traiçoeiros. Eles cobrem suas flechas e adagas com extratos de serpentes, cogumelos podres e qualquer outra coisa repulsiva que encontrarem. Um bando de Goblins Venenosos pode deter um grupo de aventureiros experientes não pela força bruta, mas pela acumulação de feridas menores que rapidamente se tornam grandes problemas.",
+      "habitat": "Florestas sombrias, cavernas rasas, ruínas próximas a cidades",
+      "stats": { "for": 8, "des": 14, "con": 10, "int": 10, "sab": 8, "car": 8 },
+      "habilidades": [
+        { "nome": "Veneno", "descricao": "As armas do goblin são envenenadas. Na primeira vez que acertado por um ataque do goblin, a criatura faz uma salvaguarda de Con CD 10 ou ficará envenenada por 1 hora." },
+        { "nome": "Fuga Ágil", "descricao": "O goblin pode realizar as ações Desengajar ou Esconder como ação bônus em cada um de seus turnos." }
+      ],
+      "tags": ["humanoide", "goblin", "veneno", "comum"]
+    },
+    {
+      "id": "drake-trovejante",
+      "nome": "Drake Trovejante",
+      "tipo": "Dragão",
+      "raridade": "Incomum",
+      "cr": 4,
+      "pv": 66,
+      "ca": 14,
+      "deslocamento": "9 m, voo 18 m",
+      "descricao": "Menor que um dragão verdadeiro. Mais irritado, no entanto.",
+      "lore": "O Drake Trovejante não tem a inteligência de um dragão adulto, mas tem o orgulho e o temperamento. Quando encontra aventureiros em seu território, não faz perguntas — ataca. Seu sopro de relâmpago pode ser ouvido a quilômetros de distância, e as tempestades ao redor de seu ninho raramente são coincidência.",
+      "habitat": "Picos de montanha, tempestades persistentes, ruínas de torres de mago",
+      "stats": { "for": 16, "des": 12, "con": 15, "int": 6, "sab": 11, "car": 8 },
+      "habilidades": [
+        { "nome": "Sopro de Relâmpago (recarga 5-6)", "descricao": "O drake exala um raio em uma linha de 18 m. Salvaguarda de Des CD 13, 4d8 de dano de relâmpago." },
+        { "nome": "Mordida Condutora", "descricao": "Ataque corpo a corpo: +5 para acertar, 1d8+3 de dano perfurante + 1d6 de dano de relâmpago." }
+      ],
+      "tags": ["dragão", "relâmpago", "incomum", "voador"]
+    },
+    {
+      "id": "devorador-cosmico",
+      "nome": "Devorador Cósmico",
+      "tipo": "Aberração",
+      "raridade": "Épico",
+      "cr": 15,
+      "pv": 180,
+      "ca": 17,
+      "deslocamento": "1,5 m, voo 12 m (flutuar)",
+      "descricao": "Um horror cósmico de tentáculos molhados e múltiplos olhos que flutua no vazio.",
+      "lore": "Nascido no vazio insondável entre as estrelas, o Devorador Cósmico é uma entidade que desafia a compreensão mortal. Ele não se alimenta de carne, mas da própria sanidade e memórias daqueles que ousam encará-lo. Sua presença distorce a gravidade e o espaço, criando um campo de puro terror lovecraftiano.",
+      "habitat": "Fendas dimensionais, templos esquecidos no subsolo, O Vazio",
+      "stats": { "for": 14, "des": 12, "con": 18, "int": 22, "sab": 18, "car": 16 },
+      "habilidades": [
+        { "nome": "Aura da Loucura", "descricao": "Qualquer criatura que comece seu turno a até 9 metros do Devorador deve fazer um teste de Sabedoria CD 16. Em caso de falha, a criatura sofre desvantagem em seus próximos ataques devido a visões aterrorizantes." },
+        { "nome": "Abraço do Vazio", "descricao": "Ataque Mágico Corpo a Corpo: +10 para acertar, alcance 4,5 m, um alvo. Acerto: O alvo sofre 4d10 de dano psíquico e fica agarrado pelos tentáculos roxos da criatura." }
+      ],
+      "tags": ["aberração", "cósmico", "épico", "psíquico"]
+    },
+    {
+      "id": "anjo-caido-abismo",
+      "nome": "Anjo Caído do Abismo",
+      "tipo": "Celestial",
+      "raridade": "Lendário",
+      "cr": 21,
+      "pv": 245,
+      "ca": 21,
+      "deslocamento": "9 m, voo 24 m",
+      "descricao": "Um guerreiro divino corrompido, com asas de penas negras esfarrapadas e uma máscara dourada rachada.",
+      "lore": "Outrora um guardião das chamas celestiais, este ser foi consumido pela própria escuridão que jurou destruir. Agora, banido para o Abismo, ele empunha uma espada corrompida. Sua máscara dourada esconde um rosto desprovido de luz, e sua mera presença sufoca qualquer esperança em um campo de batalha. Lendas dizem que suas lágrimas se transformam em cinzas antes de tocarem o chão.",
+      "habitat": "Campos de batalha profanados, planícies de cinzas, profundezas do Abismo",
+      "stats": { "for": 24, "des": 18, "con": 22, "int": 16, "sab": 20, "car": 24 },
+      "habilidades": [
+        { "nome": "Presença Aterradora", "descricao": "Cada criatura à escolha do Anjo a até 36 metros dele deve ser bem-sucedida num teste de Sabedoria CD 21 ou ficará amedrontada por 1 minuto." },
+        { "nome": "Golpe do Julgamento Profano", "descricao": "Ataque com Espada Grande: +14 para acertar, alcance 1,5 m, um alvo. Acerto: O alvo sofre 2d6 + 7 de dano cortante mais 4d8 de dano necrótico. Se o alvo for uma criatura boa, ele deve passar num teste de Constituição ou perderá parte de sua vitalidade máxima." }
+      ],
+      "tags": ["celestial", "corrompido", "lendário", "abissal"]
+    },
+    {
+      "id": "ent-corrompido",
+      "nome": "Ent Corrompido pela Praga",
+      "tipo": "Planta",
+      "raridade": "Raro",
+      "cr": 8,
+      "pv": 135,
+      "ca": 16,
+      "deslocamento": "6 m",
+      "descricao": "Uma árvore monstruosa morta, com casca retorcida e seiva roxa brilhante vazando de suas rachaduras.",
+      "lore": "Esta antiga criatura protetora da floresta foi vítima de uma magia negra ancestral. Onde antes abrigava a vida selvagem em seus galhos, agora espalha necrose e podridão por onde passa. Sua seiva tornou-se um veneno altamente volátil, e suas raízes se movem como tentáculos famintos sob a terra lamacenta, esmagando invasores com força brutal.",
+      "habitat": "Pântanos mortos, florestas corrompidas, charcos enevoados",
+      "stats": { "for": 20, "des": 8, "con": 18, "int": 6, "sab": 10, "car": 6 },
+      "habilidades": [
+        { "nome": "Raízes Esmagadoras", "descricao": "Como uma ação, o Ent pode fazer com que raízes espinhentas irrompam do chão num raio de 6 metros. Todas as criaturas na área devem passar num teste de Destreza CD 15 ou sofrer 3d6 de dano contundente e ficar impedidas." },
+        { "nome": "Sangrar Seiva Tóxica", "descricao": "Sempre que o Ent sofre dano cortante ou perfurante, todas as criaturas a até 1,5 metro dele devem passar num teste de Constituição CD 14, ou sofrerão 2d6 de dano venenoso pela seiva roxa corrosiva que espirra de sua casca." }
+      ],
+      "tags": ["planta", "corrompido", "raro", "floresta"]
+    },
+    {
+      "id": "nagi-loxley",
+      "nome": "Nagi Loxley",
+      "tipo": "Herói Híbrido",
+      "raridade": "Lendário",
+      "cr": 18,
+      "pv": 210,
+      "ca": 20,
+      "deslocamento": "12 m",
+      "descricao": "Herdeiro de tronos poderosos, recusa uma profecia de terror para trilhar o próprio caminho como rei.",
+      "lore": "Nagi Loxley é um jovem de feições japonesas que carrega uma dualidade amaldiçoada: o sangue frio dos vampiros e a fúria caótica dos demônios. Existe uma profecia antiga que o liga à destruição, mas ele possui um olhar de aço determinado e recusa esse destino. Empunhando sua Lâmina Emblemática, uma relíquia que canaliza seu poder abissal em um tom roxo profundo, o jovem rei viaja não como uma vítima do destino, mas como alguém lutando ativamente contra ele. Cada uso de seu poder é uma aposta perigosa contra sua própria humanidade.",
+      "habitat": "Castelo Loxley, campos de batalha e cortes reais corrompidas",
+      "stats": { "for": 22, "des": 18, "con": 20, "int": 16, "sab": 14, "car": 20 },
+      "habilidades": [
+        { "nome": "Dualidade Amaldiçoada", "descricao": "Nagi possui resistência a dano necrótico e de fogo devido à sua linhagem meio-vampiro e meio-demônio. Seus ataques ignoram imunidades e resistências a dano cortante de criaturas celestiais ou corruptas." },
+        { "nome": "Ataque da Lâmina Emblemática", "descricao": "Ataque com Arma Corpo a Corpo: +12 para acertar, alcance 1,5 m, um alvo. Acerto: O alvo sofre dano mágico cortante e adicional de energia sombria. Nagi recupera Pontos de Vida iguais à metade do dano sombrio causado." },
+        { "nome": "Aura de Rei (Postura de Comando)", "descricao": "Qualquer aliado a até 9 metros de Nagi tem vantagem em testes de resistência contra medo ou encantamento, inspirados por sua determinação feroz e postura imponente." }
+      ],
+      "tags": ["híbrido", "herói", "lendário", "vampiro", "demônio"]
+    }
+  ]
+}
